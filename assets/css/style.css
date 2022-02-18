@@ -79,6 +79,8 @@ header .intro{
     height: 516px;
 
     color: var(--charcoal-);
+
+    overflow: hidden;
 }
 
 header .intro .big-circle{
@@ -89,8 +91,8 @@ header .intro .big-circle{
 
     position: relative;
 
-    top: 115px;
-    left: 815px;
+    top: 100px;
+    left: 775px;
 
-    z-index: 0;
+    clip-path: inset(0 50% 50% 0);
 }
