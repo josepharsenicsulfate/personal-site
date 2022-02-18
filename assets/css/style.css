@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --red-: #B80C09;
+    --charcoal-: #040F16;
+    --white-: #FBFBFF;
+    --grey-: #C4C4C4;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+header{
+    padding: 85px 116px;
+    background-color: var(--charcoal-);
+    color: var(--white-);
+}
+
+header .navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+header .navbar .logo{
+    display: flex;
+    align-items: center;
+}
+
+header .navbar .logo .circle{
+    border-radius: 50%;
+    background-color: var(--red-);
+
+    width: 54px;
+    height: 54px;
+
+    margin-right: 13px;
+}
+
+header .navbar .logo h1{
+    font-size: 54px;
+}
+
+header .navbar .links{
+    display: flex;
+    align-items: center;
+
+    gap: 37px;
+}
+
+header .navbar .links a{
+    text-decoration: none;
+    color: var(--white-);
+    font-size: 18px;
+}
+
+header .navbar .links :last-child{
+    background-color: var(--red-);
+    height: 24px;
+    width: 68px;
+
+    text-align: center;
+}
+
+header .intro{
+    margin-top: 28px;
+    background-color: var(--white-);
+    width: 100%;
+    height: 516px;
+
+    color: var(--charcoal-);
+}
+
+header .intro .big-circle{
+    background-color: var(--red-);
+    width:  724px;
+    height: 724px;
+    border-radius: 50%;
+
+    position: relative;
+
+    top: 115px;
+    left: 815px;
+
+    z-index: 0;
+}
