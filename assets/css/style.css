@@ -10,9 +10,15 @@
     font-size: 18px;
 }
 
+html{
+    overflow-x: hidden;
+}
+
 body{
     margin: 0;
     padding: 0;
+
+    overflow-x: hidden;
 }
 
 h1,h2,h3,h4,h5,h6,p{
@@ -56,13 +62,54 @@ header .navbar .links{
     display: flex;
     align-items: center;
 
-    gap: 0px;
+    gap: 3px;
 }
+
+header .navbar .links a{
+    text-decoration: none;
+    color: var(--white-);
+    font-size: 12px;
+    border-bottom: 3px solid transparent;
+}
+
+header .navbar .links a:hover{
+    border-bottom: 3px solid var(--red-);
+    transition: 0.5s ease;
+}
+
+header .navbar .links :last-child{
+    background-color: var(--red-);
+    height: 18px;
+    width: 45px;
+    border-bottom: none;
+
+    text-align: center;
+}
+
+header .navbar .links :last-child:hover{
+    background-color: var(--white-);
+    color: var(--red-);
+    border-bottom: none;
+}
+  
+header .intro{
+    margin-top: 28px;
+    background-color: var(--white-);
+    width: 100%;
+    height: 70vh;
+
+    color: var(--charcoal-);
+
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: 100%;
+}
+
 
 @media screen and (min-width: 1366px){
     body > * {
         padding: 84px 116px;
-        height: calc(100vh - 168px);
     }
 
     header .navbar{
@@ -83,31 +130,23 @@ header .navbar .links{
     }
 
     header .navbar .links{
-        display: flex;
-        align-items: center;
-    
         gap: 37px;
     }
 
     header .navbar .links a{
-        text-decoration: none;
-        color: var(--white-);
         font-size: 18px;
     }
     
     header .navbar .links :last-child{
-        background-color: var(--red-);
         height: 24px;
         width: 68px;
-    
-        text-align: center;
     }
     
     header .intro{
         margin-top: 28px;
         background-color: var(--white-);
         width: 100%;
-        height: 516px;
+        height: 70vh;
     
         color: var(--charcoal-);
     
@@ -131,22 +170,6 @@ header .navbar .links{
     }
     
     header .intro .big-circle{
-        /* background-color: var(--red-);
-        width:  724px;
-        height: 724px;
-        border-radius: 50%;
-    
-        position: relative;
-    
-        top: 0px;
-        left: 0px;
-    
-        clip-path: inset(0 50% 50% 0); */
-
-        /* display: flex;
-        justify-content: flex-end;
-        align-items: flex-end; */
-
         margin: auto 0 0 auto;
     }
 
@@ -159,12 +182,13 @@ header .navbar .links{
 
     section .gallery{
         display: grid;
+        gap: 1px;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 200px);
+        grid-template-rows: repeat(3, 30vh);
     }
 
     section .gallery > *{
-        border: 1px solid var(--red-);
+        border: 2px solid var(--red-);
 
         background-image: url('../img/default.png');
         background-repeat: no-repeat;
@@ -173,24 +197,54 @@ header .navbar .links{
     }
 
     section .gallery > *:hover{ 
-        transform: scale(1.01);
-        transition: all 0.1s ease-in;
+        transition: 0.5s ease-in;
     }
 
-    section .gallery :nth-child(2){
+    section .gallery .gallery-content .overlay{
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(184,12,9,0.9);
+    }
+
+    section .gallery .gallery-content .overlay p{
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        vertical-align: middle;
+        color: var(--white-);
+    }
+
+    section .gallery .gallery-content:hover .overlay{
+        opacity: 1;
+        transition: 0.5s ease;
+    }
+
+    section .gallery > :first-child{
+        background-image: url('../img/red-bg.jpg');
+    }
+
+    section .gallery > :nth-child(2){
         grid-column: span 2;
+        background-image: url('../img/red-bg2.jpg');
     }
 
-    section .gallery :nth-child(3){
+    section .gallery > :nth-child(3){
         grid-row: span 3;
     }
 
-    section .gallery :nth-child(4){
+    section .gallery > :nth-child(4){
         grid-column: span 3;
     }
 
-    section .gallery :nth-child(5){
+    section .gallery > :nth-child(5){
         grid-column: span 2;
+        background-image: url('../img/red-bg2.jpg');
+    }
+
+    section .gallery > :nth-child(6){
+        background-image: url('../img/red-bg.jpg');
     }
 
     section.bottom{
@@ -200,7 +254,11 @@ header .navbar .links{
     section .card-container{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 50px;
+        gap: 40px;
+    }
+
+    section.bottom h1{
+        margin: 50px;
     }
 
     section .card-container .card{
@@ -223,7 +281,48 @@ header .navbar .links{
         margin: 25px 0;
     }
 
+    footer{
+        padding: 35px 116px; 
+        height: 10vh; 
+        display: flex; 
+        flex-wrap: nowrap; 
+        justify-content: space-between; 
+        gap: 25px; 
+        background-color: #ccc;
+    }
+
     footer > *{
         width: 25%;
+    }
+
+    footer .footer-text p{
+        font-size: 14px;
+    }
+
+    footer .footer-text .footer-circle{
+        display: inline-block; 
+        width: 18px; 
+        height: 18px; 
+        border-radius: 50%; 
+        background-color: var(--red-);
+    }
+
+    footer .footer-contact h6{
+        font-size: 12px; 
+        text-transform: capitalize;
+    }
+
+    footer .footer-sns{
+        text-align: center;
+    }
+
+    footer .footer-sns i:hover{
+        transition: 0.3s ease;
+        color: var(--red-);
+    }
+
+    footer .footer-attribution p span{
+        color: var(--red-); 
+        font-weight: 700;
     }
 }
