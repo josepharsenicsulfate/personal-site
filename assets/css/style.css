@@ -10,9 +10,6 @@
     font-size: 18px;
 }
 
-html{
-}
-
 body{
     margin: 0;
     padding: 0;
@@ -24,7 +21,12 @@ h1,h2,h3,h4,h5,h6,p{
 }
 
 body > * {
-    padding: 10px 10px;
+    padding: 25px 10px;
+}
+
+span{
+    color: var(--red-);
+    font-weight: 900;
 }
 
 /* header */
@@ -136,6 +138,11 @@ header .intro .big-circle img{
     display: block;
 }
 
+section.middle h1{
+    text-align: center;
+    margin: 25px;
+}
+
 section .gallery{
     display: grid;
     gap: 1px;
@@ -155,18 +162,30 @@ section .gallery > *:hover{
 }
 
 section .gallery .gallery-content .overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     opacity: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(184,12,9,0.9);
+    background-color: rgba(184,12,9,0.97);
 }
 
 section .gallery .gallery-content .overlay p{
-    margin: auto;
-    width: 100%;
-    height: 100%;
-    text-align: center;
     color: var(--white-);
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+section .gallery .gallery-content .overlay p a{
+    color: var(--white-);
+}
+
+section .gallery .gallery-content .overlay p a:hover{
+    background-color: var(--white-);
+    transition: all 0.3s ease;
+    color: var(--red-);
 }
 
 section .gallery .gallery-content:hover .overlay{
@@ -175,25 +194,27 @@ section .gallery .gallery-content:hover .overlay{
 }
 
 section .gallery > :first-child{
-    background-image: url('../img/red-bg.jpg');
+    background-image: url('../img/todo.png');
 }
 
 section .gallery > :nth-child(2){
-    background-image: url('../img/red-bg2.jpg');
+    background-image: url('../img/huddle-curve.png');
 }
 
 section .gallery > :nth-child(3){
+    background-image: url('../img/fylo-dark.png');
 }
 
 section .gallery > :nth-child(4){
+    background-image: url('../img/huddle-landing.png');
 }
 
 section .gallery > :nth-child(5){
-    background-image: url('../img/red-bg2.jpg');
+    background-image: url('../img/sunnyside.png');
 }
 
 section .gallery > :nth-child(6){
-    background-image: url('../img/red-bg.jpg');
+    background-image: url('../img/pos.png');
 }
 
 section.bottom{
@@ -228,6 +249,8 @@ section .card-container .card img{
     width: 50px;
     height: 50px;
     margin: 25px 0;
+    padding: 10px;
+    background-color: var(--white-);
 }
 
 section .card-container .card p{
@@ -259,9 +282,8 @@ footer .footer-text .footer-circle{
     background-color: var(--red-);
 }
 
-footer .footer-contact h6{
-    font-size: 12px; 
-    text-transform: capitalize;
+footer .footer-contact{
+    font-size: 14px; 
 }
 
 
@@ -269,19 +291,18 @@ footer .footer-sns{
     text-align: center;
 }
 
+footer .footer-sns a:visited{
+    color: var(--charcoal-);
+}
+
 footer .footer-sns i:hover{
     transition: 0.3s ease;
     color: var(--red-);
 }
 
-footer .footer-attribution p span{
-    color: var(--red-); 
-    font-weight: 700;
-}
-
-@media screen and (min-width: 1366px){
+@media screen and (min-width: 1024px){
     body > * {
-        padding: 84px 116px;
+        padding: 50px;
     }
 
     header .navbar .logo .circle{
@@ -300,6 +321,7 @@ footer .footer-attribution p span{
     }
 
     header .navbar .links a{
+        display: block;
         font-size: 18px;
     }
     
@@ -354,11 +376,11 @@ footer .footer-attribution p span{
 
     section.bottom .card-container{
         grid-template-columns: repeat(4, 1fr);
-        gap: 40px;
+        gap: 20px;
     }
 
     section .card-container .card{
-        padding: 36px 49px;
+        padding: 35px;
     }
 
     section .card-container .card img{
@@ -371,7 +393,6 @@ footer .footer-attribution p span{
 
     footer{
         padding: 35px 116px; 
-        height: 10vh; 
         gap: 25px;
         flex-wrap: nowrap;
     }
@@ -382,5 +403,20 @@ footer .footer-attribution p span{
 
     footer .footer-text p{
         font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1366px){
+    body > * {
+        padding: 84px 116px;
+    }
+
+    section.bottom .card-container{
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+    }
+
+    section .card-container .card{
+        padding: 36px 49px;
     }
 }
