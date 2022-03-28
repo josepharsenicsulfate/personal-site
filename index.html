@@ -10,11 +10,11 @@
     <!-- css -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- js -->
-    <script src="assets/js/script.js"></script>
-
     <!-- fa -->
     <script src="https://kit.fontawesome.com/60b39ed68f.js" crossorigin="anonymous"></script>
+
+    <!-- js -->
+    <script src="assets/js/script.js" defer></script>
 
 </head>
 <body>
@@ -25,11 +25,9 @@
                 <h1>JG</h1>
             </div>
             <div class="links">
-                <i class="fa-solid fa-bars" onclick="myfunc()"></i>
-                <i class="fa-solid fa-xmark" onclick="myfunc()"></i>
-                <a href="#">About</a>
-                <a href="#">Projects</a>
-                <a href="#">Profile</a>
+                <a href="#top">About</a>
+                <a href="#middle">Projects</a>
+                <a href="#profile">Profile</a>
                 <a href="#">Contact</a>
             </div> 
         </div>
@@ -43,37 +41,41 @@
             </div>
         </div>
     </header>
+    <section id="top" class="top">
+        <h1><span>About</span> the site</h1>
+        <p>This website is made with the purpose of showcasing my current work as a web developer focused primarily on front-end web development.</p>
+    </section>
 
-    <section class="middle">
+    <section id="middle" class="middle">
         <h1>Here's some of my recent <span>projects</span></h1>
         <div class="gallery">
-            <div class="gallery-content">
+            <div class="gallery-content reveal">
                 <div class="overlay">
                     <p>A simple to-do list web app made with JavaScript. <br>Visit: <a href="https://josepharsenicsulfate.github.io/todo/" target="_blank">To-do List</a></p>
                 </div>
             </div>
-            <div class="gallery-content">
+            <div class="gallery-content reveal">
                 <div class="overlay">
                     <p>Front-end mentor challenge for a landing page with the use of curved svg as part of the design. <br>Visit: <a href="https://josepharsenicsulfate.github.io/frontendmentor-huddle-curve/" target="_blank">Huddle Curve</a></p>
                 </div>
             </div>
-            <div class="gallery-content">
+            <div class="gallery-content reveal">
                 <div class="overlay">
                     <p>Dark themed front-end mentor challenge for a landing page. <br>Visit: <a href="https://josepharsenicsulfate.github.io/fylo-dark/" target="_blank">Fylo Dark Landing Page</a></p>
                 </div>
             </div>
 
-            <div class="gallery-content">
+            <div class="gallery-content reveal">
                 <div class="overlay">
                     <p>Basic landing page with only two main elements from front-end mentor challenges. <br>Visit: <a href="https://josepharsenicsulfate.github.io/frontendmentor-huddle/" target="_blank">Huddle Landing Page</a></p>
                 </div>
             </div>
-            <div class="gallery-content">
+            <div class="gallery-content reveal">
                 <div class="overlay">
                     <p>Another front-end mentor challenge for a landing page constructed with CSS grid. <br>Visit: <a href="https://josepharsenicsulfate.github.io/sunnyside/" target="_blank">Sunnyside Landing Page</a></p>
                 </div>
             </div>
-            <div class="gallery-content">
+            <div class="gallery-content reveal">
                 <div class="overlay">
                     <p>A simple point-of-sales web app powered by JavaScript only. <br>Visit: <a href="https://josepharsenicsulfate.github.io/pos-js/" target="_blank">Point-of-Sales Web App</a></p>
                 </div>
@@ -84,25 +86,25 @@
     <section class="bottom">
         <h1>Tools that I have <span>experience</span> in</h1>
         <div class="card-container">
-            <div class="card">
+            <div class="card reveal">
                 <img src="assets/img/html-red.png" alt="">
                 <p>
                     HTML, one of the essentials in web development.
                 </p>
             </div>
-            <div class="card">
+            <div class="card reveal">
                 <img src="assets/img/css-red.png" alt="">
                 <p>
                     CSS, making websites more colorful and organized.
                 </p>
             </div>
-            <div class="card">
+            <div class="card reveal">
                 <img src="assets/img/js-red.png" alt="">
                 <p>
                     JavaScript, adds interactivity to the web.
                 </p>
             </div>
-            <div class="card">
+            <div class="card reveal">
                 <img src="assets/img/btrap-red.png" alt="">
                 <p>
                     Bootstrap, a front-end framework with built-in templates.
@@ -110,6 +112,12 @@
             </div>
         </div>
         
+    </section>
+
+    <section id="profile" class="profile">
+        <h1>Developer's <span>profile</span></h1>
+        <img class="reveal" src="assets/img/gladge.png" alt="" srcset="">
+        <p class="reveal">I am a student currently taking up a bachelor's degree program in Information Technology at the University of Negros Occidental - Recoletos. gladge.</p>
     </section>
 
     <footer>
@@ -131,5 +139,6 @@
             <p>copyright <span>2022</span></p>
         </div>
     </footer>
+
 </body>
 </html>
