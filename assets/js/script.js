@@ -8,6 +8,11 @@ function reveal() {
   
       if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add("active");
+
+        if(reveals[i].classList.contains('left') || reveals[i].classList.contains('right')){
+          reveals[i].style.tranform = "translateX(0)"
+        }
+        
       } else {
         reveals[i].classList.remove("active");
       }
